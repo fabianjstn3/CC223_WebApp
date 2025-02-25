@@ -6,7 +6,7 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
         if (!response.ok) throw new Error('Failed to fetch API');
 
         const data = await response.json();
-        console.log("Generated Password:", data.password); // ✅ Debugging log
+        console.log("Generated Password:", data.password); //debug log
         document.getElementById('password').value = data.password;
     } catch (error) {
         console.error("Error fetching API:", error);
