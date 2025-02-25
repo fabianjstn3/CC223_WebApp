@@ -26,3 +26,10 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
         console.error("Error fetching API:", error);
     }
 });
+
+document.getElementById('copyBtn').addEventListener('click', () => {
+    const passwordField = document.getElementById('password');
+    passwordField.select();
+    document.execCommand('copy');
+    alert('Password copied to clipboard!');
+});
